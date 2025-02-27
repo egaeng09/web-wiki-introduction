@@ -29,7 +29,7 @@ window.onload = function(){
       }
 
       else {
-        alert("댓글이 등록되었습니다");
+        alert("댓글이 등록되었습니다.");
         add_comment(comment);
         document.querySelector('.comment_box').value = '';
       }
