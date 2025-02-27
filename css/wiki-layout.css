@@ -63,10 +63,21 @@ article > p {
   text-indent: 8px;
 }
 
+section > p,
+article > p {
+  line-height: 24px;
+  text-indent: 8px;
+  margin : 10px;
+}
+
 section,
 article {
   display: flex;
   flex-flow: column;
+}
+
+section > article {
+  margin: 20px 0;
 }
 
 div.thumbnail {
@@ -98,7 +109,7 @@ aside h2 {
 }
 
 .profile-image {
-  background-image: url("https://images.unsplash.com/photo-1618979251882-0b40ef3617f0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("./../images/img0.jpeg");
   background-size: 100%;
   background-position: center 100%;
   width: var(--aside-width);
@@ -151,4 +162,85 @@ footer p {
 
   --divider-color: #efefef;
   --font-default-color: #333;
+}
+
+.comment-item {
+  border : 1.5px solid #efefef;
+  margin : 5px 0;
+}
+
+.comment-author {
+  height: 40px;
+  display: flex;
+}
+
+.writer_box {
+  height: 100%;
+}
+
+.writer_box {
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 800;
+}
+
+.comment-author > img {
+  width: 30px;
+  margin : 5px;
+}
+
+.comment-content {
+  margin : 0 10px 10px 10px;
+  font-size: 13px;
+  letter-spacing : 0.05em;
+  line-height: 1.3em;
+}
+
+.comment-writing-container > form > fieldset {
+  margin: 15px 0 10px 0;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.comment-writing-container textarea {
+  width : 75%;
+  height : 43px;
+  resize: none;
+  border: 1.5px solid #efefef;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.cancel_btn, .enter_btn {
+  width : 12.5%;
+  height : 100%;
+  border: 1.5px solid #efefef;
+  cursor: pointer;
+}
+
+.cancel_btn {
+  background-color: #efefef;
+}
+
+.enter_btn {
+  background-color: skyblue;
+  border: 1.5px solid skyblue;
+}
+
+.picture_continaer {
+  width : 100%;
+}
+
+.picture_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.picture_box > img {
+  width: 33%;
+  aspect-ratio : 1 / 1;
 }

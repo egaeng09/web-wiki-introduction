@@ -16,4 +16,30 @@ console.log(
   "color: #d81b60; font-size: 16px; font-weight: bold;"
 );
 
-console.log("알맞은 스크립트를 작성하세요");
+window.onload = function(){
+  document.querySelector('.enter_btn').addEventListener('click', ( ) => {
+    click_add_button();
+  });
+
+  function click_add_button(){
+    if(confirm("등록하시겠습니까?")){
+      const comment = document.querySelector('.comment_box').value;
+      if (comment.length === 0) {
+        alert("댓글을 입력해주세요.")
+      }
+
+      else {
+        alert("댓글이 등록되었습니다");
+        add_comment(comment);
+        document.querySelector('.comment_box').value = '';
+      }
+    }
+  }
+
+  function add_comment(comment) {
+    const body = document.querySelector('li').cloneNode(true);
+    body.querySelector('.comment-content').textContent = comment
+    document.querySelector('ul').appendChild(body);
+  }
+
+}
